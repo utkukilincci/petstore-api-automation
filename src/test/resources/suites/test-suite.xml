@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="petstore-api-acceptance-tests" configfailurepolicy="continue">
+    <test name="petstore-api-acceptance-tests">
+        <classes>
+            <class name="pet.PostPetEndpointTests"/>
+            <class name="pet.UpdatePetEndpointTests"/>
+            <class name="pet.GetPetEndpointTests"/>
+            <class name="pet.DeletePetEndpointTests"/>
+        </classes>
+    </test>
+</suite>
