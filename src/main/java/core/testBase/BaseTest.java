@@ -1,4 +1,4 @@
-package base;
+package core.testBase;
 
 import org.testng.ITestContext;
 import org.testng.ITestNGMethod;

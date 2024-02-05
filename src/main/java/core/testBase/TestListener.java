@@ -1,11 +1,11 @@
-package base;
+package core.testBase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import static helpers.LogUtils.*;
+import static core.helpers.LogUtils.*;
 
 public class TestListener implements ITestListener {
 

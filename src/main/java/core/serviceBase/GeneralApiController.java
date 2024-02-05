@@ -1,17 +1,13 @@
-package serviceBase;
+package core.serviceBase;
 
 
-import base.Keywords;
+import core.testBase.Keywords;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.List;
-
-import static helpers.LogUtils.logInfo;
-import static io.restassured.RestAssured.basePath;
+import static core.helpers.LogUtils.logInfo;
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 

@@ -1,18 +1,20 @@
 package pet;
 
-import base.BaseTest;
-import controller.PetController;
-import controller.controllerRequestData.PetControllerData;
-import models.PetModel;
+import core.testBase.BaseTest;
+import controller.service.request.PetController;
+import controller.service.requestData.PetControllerData;
+import controller.models.PetModel;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
-import serviceBase.ReadableResponse;
+import core.serviceBase.ReadableResponse;
 
-import static base.Keywords.BAD_HAPPENED_ERROR;
-import static helpers.RandomUtils.randomName;
-import static matchers.BaseMatchers.shouldResponseEqualsMessageAs;
-import static matchers.BaseMatchers.shouldStatusCodeSameAs;
-import static matchers.PetControllerMatchers.shouldExistPet;
+import java.io.*;
+
+import static core.testBase.Keywords.BAD_HAPPENED_ERROR;
+import static core.helpers.RandomUtils.randomName;
+import static controller.matchers.BaseMatchers.shouldResponseEqualsMessageAs;
+import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
+import static controller.matchers.PetControllerMatchers.shouldExistPet;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 

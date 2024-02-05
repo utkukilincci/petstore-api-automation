@@ -1,13 +1,13 @@
-package controller.controllerHelper;
+package controller.service.helper;
 
 import com.google.gson.Gson;
-import controller.PetController;
-import controller.controllerRequestData.PetControllerData;
-import models.PetModel;
+import controller.service.request.PetController;
+import controller.service.requestData.PetControllerData;
+import controller.models.PetModel;
 import org.json.JSONObject;
-import serviceBase.ReadableResponse;
+import core.serviceBase.ReadableResponse;
 
-import static matchers.BaseMatchers.shouldStatusCodeSameAs;
+import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.MatcherAssert.assertThat;
 

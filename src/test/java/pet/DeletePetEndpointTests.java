@@ -1,15 +1,15 @@
 package pet;
 
-import base.BaseTest;
-import controller.PetController;
-import controller.controllerHelper.PetControllerHelper;
-import models.PetModel;
+import core.testBase.BaseTest;
+import controller.service.request.PetController;
+import controller.service.helper.PetControllerHelper;
+import controller.models.PetModel;
 import org.testng.annotations.Test;
-import serviceBase.ReadableResponse;
+import core.serviceBase.ReadableResponse;
 
-import static helpers.RandomUtils.randomId;
-import static matchers.BaseMatchers.shouldResponseEqualsMessageAs;
-import static matchers.BaseMatchers.shouldStatusCodeSameAs;
+import static core.helpers.RandomUtils.randomId;
+import static controller.matchers.BaseMatchers.shouldResponseEqualsMessageAs;
+import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.MatcherAssert.assertThat;

@@ -1,16 +1,16 @@
-package base;
+package core.testBase;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class Retry implements IRetryAnalyzer {
 
-    private static int maxTry = Keywords.RETRY_COUNT_FOR_FAILED_TEST;
     private int count;
 
     @Override
     public boolean retry(ITestResult result) {
         if (!result.isSuccess()) {
+            int maxTry = Keywords.RETRY_COUNT_FOR_FAILED_TEST;
             if (count < maxTry) {
                 count++;
                 return true;

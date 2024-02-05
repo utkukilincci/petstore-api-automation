@@ -1,14 +1,14 @@
-package controller;
+package controller.service.request;
 
 import org.json.JSONObject;
-import serviceBase.GeneralApiController;
-import serviceBase.ReadableResponse;
+import core.serviceBase.GeneralApiController;
+import core.serviceBase.ReadableResponse;
 
-import static base.Keywords.BASE_URL;
+import static core.testBase.Config.getPetStoreApiUrl;
 
 public class PetController extends GeneralApiController {
     public PetController() {
-        super(BASE_URL);
+        super(getPetStoreApiUrl());
     }
 
     public ReadableResponse postPet(JSONObject body) {

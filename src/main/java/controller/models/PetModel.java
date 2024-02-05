@@ -1,19 +1,32 @@
-package models;
+package controller.models;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
-import static helpers.RandomUtils.randomId;
-import static helpers.RandomUtils.randomName;
+import static core.helpers.RandomUtils.randomId;
+import static core.helpers.RandomUtils.randomName;
 
 @Data
 public class PetModel {
+    @SerializedName("id")
     private Long id;
+
+    @SerializedName("category")
     private PetCategory category;
+
+    @SerializedName("name")
     private String name;
+
+    @SerializedName("photoUrls")
     private List<String> photoUrls;
+
+    @SerializedName("tags")
     private List<PetTags> tags;
+
+    @SerializedName("status")
     private String status;
 
     public static PetModel createPet() {
@@ -39,13 +52,19 @@ public class PetModel {
 }
 
 @Data
-class PetCategory {
+class PetCategory implements Serializable {
+    @SerializedName("id")
     private Long id = randomId();
+
+    @SerializedName("name")
     private String name = randomName();
 }
 
 @Data
-class PetTags {
+class PetTags implements Serializable {
+    @SerializedName("id")
     private Long id = randomId();
+
+    @SerializedName("name")
     private String name = randomName();
 }

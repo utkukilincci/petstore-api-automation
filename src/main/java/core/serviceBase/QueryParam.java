@@ -1,4 +1,4 @@
-package serviceBase;
+package core.serviceBase;
 
 import static java.lang.String.format;
 

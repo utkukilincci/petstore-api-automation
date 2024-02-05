@@ -1,9 +1,9 @@
-package matchers;
+package controller.matchers;
 
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
-import serviceBase.ReadableResponse;
+import core.serviceBase.ReadableResponse;
 
 
 import static java.lang.String.format;
