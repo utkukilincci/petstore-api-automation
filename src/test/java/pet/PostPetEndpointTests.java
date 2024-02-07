@@ -4,11 +4,10 @@ import core.testBase.BaseTest;
 import controller.service.request.PetController;
 import controller.service.requestData.PetControllerData;
 import controller.models.PetModel;
+import io.qameta.allure.Description;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 import core.serviceBase.ReadableResponse;
-
-import java.io.*;
 
 import static core.testBase.Keywords.BAD_HAPPENED_ERROR;
 import static core.helpers.RandomUtils.randomName;
@@ -23,6 +22,7 @@ public class PostPetEndpointTests extends BaseTest {
     PetControllerData petControllerData = new PetControllerData();
 
     @Test
+    @Description("Should post pet with valid request body")
     public void shouldPostPet(){
         PetModel petModel = PetModel.createPet();
 
