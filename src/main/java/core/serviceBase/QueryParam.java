@@ -1,7 +1,10 @@
 package core.serviceBase;
 
+import lombok.Data;
+
 import static java.lang.String.format;
 
+@Data
 public class QueryParam {
 
     private String key;
@@ -10,19 +13,6 @@ public class QueryParam {
     public QueryParam(String key, String value) {
         this.key = key;
         this.value = value;
-    }
-
-    public QueryParam(String key, Object value) {
-        this.key = key;
-        this.value = value;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public Object getValue() {
-        return value;
     }
 
     @Override
