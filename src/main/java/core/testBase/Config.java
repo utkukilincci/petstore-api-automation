@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import static core.helpers.LogUtils.logInfo;
+import static core.utils.LogUtils.logInfo;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
 public final class Config {

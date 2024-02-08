@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import core.serviceBase.ReadableResponse;
 
 import static core.testBase.Keywords.PET_NOT_FOUND_ERROR;
-import static core.helpers.RandomUtils.randomId;
+import static core.utils.RandomUtils.randomId;
 import static controller.matchers.BaseMatchers.shouldResponseEqualsMessageAs;
 import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
 import static controller.matchers.PetControllerMatchers.shouldExistPet;

@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import static core.helpers.LogUtils.*;
+import static core.utils.LogUtils.*;
 
 public class TestListener implements ITestListener {
 

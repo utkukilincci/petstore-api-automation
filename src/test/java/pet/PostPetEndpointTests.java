@@ -9,8 +9,11 @@ import org.json.JSONObject;
 import org.testng.annotations.Test;
 import core.serviceBase.ReadableResponse;
 
+import java.util.Collections;
+import java.util.List;
+
 import static core.testBase.Keywords.BAD_HAPPENED_ERROR;
-import static core.helpers.RandomUtils.randomName;
+import static core.utils.RandomUtils.randomName;
 import static controller.matchers.BaseMatchers.shouldResponseEqualsMessageAs;
 import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
 import static controller.matchers.PetControllerMatchers.shouldExistPet;

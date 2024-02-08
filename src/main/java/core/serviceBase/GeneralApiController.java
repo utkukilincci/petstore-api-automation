@@ -3,11 +3,12 @@ package core.serviceBase;
 
 import core.testBase.Keywords;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
 
-import static core.helpers.LogUtils.logInfo;
+import static core.utils.LogUtils.logInfo;
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 
@@ -18,13 +19,16 @@ public class GeneralApiController {
     }
 
     public GeneralApiController(String baseUrl) {
-        this.spec = new RequestSpecBuilder().setBaseUri(baseUrl).setBasePath("/").build();
+        this.spec = new RequestSpecBuilder()
+                .setBaseUri(baseUrl)
+                .setBasePath("/")
+                .addHeader(Keywords.CONTENT_TYPE, Keywords.APPLICATION_JSON)
+                .build();
     }
 
     protected ReadableResponse getRequest(String endPoint) {
         Response response = given()
                 .spec(spec)
-                .header(Keywords.CONTENT_TYPE, Keywords.APPLICATION_JSON)
                 .when()
                 .get(endPoint)
                 .then()
@@ -39,7 +43,6 @@ public class GeneralApiController {
     protected ReadableResponse postRequest(JSONObject jsonObject, String endPoint) {
         Response response = given()
                 .spec(spec)
-                .header(Keywords.CONTENT_TYPE, Keywords.APPLICATION_JSON)
                 .body(jsonObject.toString())
                 .when()
                 .post(endPoint)
@@ -55,7 +58,6 @@ public class GeneralApiController {
     protected ReadableResponse putRequest(JSONObject jsonObject, String endPoint) {
         Response response = given()
                 .spec(spec)
-                .header(Keywords.CONTENT_TYPE, Keywords.APPLICATION_JSON)
                 .body(jsonObject.toString())
                 .when()
                 .put(endPoint)
@@ -71,7 +73,6 @@ public class GeneralApiController {
     protected ReadableResponse deleteRequest(String endPoint) {
         Response response = given()
                 .spec(spec)
-                .header(Keywords.CONTENT_TYPE, Keywords.APPLICATION_JSON)
                 .when()
                 .delete(endPoint)
                 .then()

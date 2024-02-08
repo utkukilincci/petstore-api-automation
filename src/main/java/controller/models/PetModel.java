@@ -6,8 +6,8 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.List;
 
-import static core.helpers.RandomUtils.randomId;
-import static core.helpers.RandomUtils.randomName;
+import static core.utils.RandomUtils.randomId;
+import static core.utils.RandomUtils.randomName;
 
 @Data
 public class PetModel {

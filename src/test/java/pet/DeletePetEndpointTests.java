@@ -1,5 +1,6 @@
 package pet;
 
+import core.serviceBase.GeneralApiController;
 import core.testBase.BaseTest;
 import controller.service.request.PetController;
 import controller.service.helper.PetControllerHelper;
@@ -7,7 +8,7 @@ import controller.models.PetModel;
 import org.testng.annotations.Test;
 import core.serviceBase.ReadableResponse;
 
-import static core.helpers.RandomUtils.randomId;
+import static core.utils.RandomUtils.randomId;
 import static controller.matchers.BaseMatchers.shouldResponseEqualsMessageAs;
 import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
