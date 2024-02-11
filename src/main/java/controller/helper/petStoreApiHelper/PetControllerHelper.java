@@ -1,9 +1,9 @@
-package controller.service.helper;
+package controller.helper.petStoreApiHelper;
 
 import com.google.gson.Gson;
-import controller.service.request.PetController;
-import controller.service.requestData.PetControllerData;
-import controller.models.PetModel;
+import controller.service.request.petStoreApiRequest.PetController;
+import controller.service.requestData.petStoreApiControllerData.PetControllerData;
+import controller.models.petStoreApiModels.PetModel;
 import org.json.JSONObject;
 import core.serviceBase.ReadableResponse;
 

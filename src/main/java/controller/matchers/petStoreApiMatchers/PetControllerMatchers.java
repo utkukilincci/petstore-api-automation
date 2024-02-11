@@ -1,7 +1,7 @@
-package controller.matchers;
+package controller.matchers.petStoreApiMatchers;
 
 import com.google.gson.Gson;
-import controller.models.PetModel;
+import controller.models.petStoreApiModels.PetModel;
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;

@@ -1,4 +1,4 @@
-package controller.service.request;
+package controller.service.request.petStoreApiRequest;
 
 import org.json.JSONObject;
 import core.serviceBase.GeneralApiController;

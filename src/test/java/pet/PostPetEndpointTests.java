@@ -1,22 +1,19 @@
 package pet;
 
 import core.testBase.BaseTest;
-import controller.service.request.PetController;
-import controller.service.requestData.PetControllerData;
-import controller.models.PetModel;
+import controller.service.request.petStoreApiRequest.PetController;
+import controller.service.requestData.petStoreApiControllerData.PetControllerData;
+import controller.models.petStoreApiModels.PetModel;
 import io.qameta.allure.Description;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 import core.serviceBase.ReadableResponse;
 
-import java.util.Collections;
-import java.util.List;
-
 import static core.testBase.Keywords.BAD_HAPPENED_ERROR;
 import static core.utils.RandomUtils.randomName;
 import static controller.matchers.BaseMatchers.shouldResponseEqualsMessageAs;
 import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
-import static controller.matchers.PetControllerMatchers.shouldExistPet;
+import static controller.matchers.petStoreApiMatchers.PetControllerMatchers.shouldExistPet;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 

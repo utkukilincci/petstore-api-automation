@@ -1,4 +1,4 @@
-package controller.models;
+package controller.models.petStoreApiModels;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;

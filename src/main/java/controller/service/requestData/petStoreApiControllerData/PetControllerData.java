@@ -1,7 +1,7 @@
-package controller.service.requestData;
+package controller.service.requestData.petStoreApiControllerData;
 
 import com.google.gson.Gson;
-import controller.models.PetModel;
+import controller.models.petStoreApiModels.PetModel;
 import org.json.JSONObject;
 
 public class PetControllerData {

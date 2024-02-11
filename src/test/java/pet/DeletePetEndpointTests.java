@@ -1,10 +1,9 @@
 package pet;
 
-import core.serviceBase.GeneralApiController;
 import core.testBase.BaseTest;
-import controller.service.request.PetController;
-import controller.service.helper.PetControllerHelper;
-import controller.models.PetModel;
+import controller.service.request.petStoreApiRequest.PetController;
+import controller.helper.petStoreApiHelper.PetControllerHelper;
+import controller.models.petStoreApiModels.PetModel;
 import org.testng.annotations.Test;
 import core.serviceBase.ReadableResponse;
 

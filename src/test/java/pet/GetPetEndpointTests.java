@@ -1,9 +1,9 @@
 package pet;
 
 import core.testBase.BaseTest;
-import controller.service.request.PetController;
-import controller.service.helper.PetControllerHelper;
-import controller.models.PetModel;
+import controller.service.request.petStoreApiRequest.PetController;
+import controller.helper.petStoreApiHelper.PetControllerHelper;
+import controller.models.petStoreApiModels.PetModel;
 import org.testng.annotations.Test;
 import core.serviceBase.ReadableResponse;
 
@@ -11,7 +11,7 @@ import static core.testBase.Keywords.PET_NOT_FOUND_ERROR;
 import static core.utils.RandomUtils.randomId;
 import static controller.matchers.BaseMatchers.shouldResponseEqualsMessageAs;
 import static controller.matchers.BaseMatchers.shouldStatusCodeSameAs;
-import static controller.matchers.PetControllerMatchers.shouldExistPet;
+import static controller.matchers.petStoreApiMatchers.PetControllerMatchers.shouldExistPet;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.MatcherAssert.assertThat;
